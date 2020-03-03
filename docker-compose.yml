@@ -31,9 +31,7 @@ services:
     image: requestgenerator:latest
     restart: always
     volumes:
-      - /home/worldofjarcraft/Downloads/Bachelorprojekt:/pdgf
-    ports:
-      - 8080:8080
+      - ../pdgf:/pdgf
     links:
       - mosquitto:users
 
