@@ -42,7 +42,6 @@ With the following being the content of config/customer-output.xml:
 	<output name="CSVRowOutput">
 		<fileTemplate>outputDir + table.getName() + fileEnding</fileTemplate>
 		<outputDir>/pdgf/output/</outputDir>
-		<!-- <outputDir>/mnt/d/OneDrive/Bachelorprojekt/output/</outputDir>-->
 		<fileEnding>.csv</fileEnding>
 		<charset>UTF-8</charset>
 		<sortByRowID>true</sortByRowID>
