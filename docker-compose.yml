@@ -10,14 +10,10 @@ services:
       - POSTGRES_USER=wordpress
       - POSTGRES_PASSWORD=wordpress
       - POSTGRES_DB=perfdata
-    ports:
-      - 5432:5432
   performancedatastorage:
     image: performancedatastorage:latest
     container_name: performancedatastorage
     restart: always
-    ports:
-      - 6080:6080
     environment:
       MYSQL_HOST: db
   mosquitto:
@@ -27,8 +23,6 @@ services:
       - ./:/mosquitto/config/
       - mosquitto_data:/mosquitto/data
       - mosquitto_log:/mosquitto/log
-    ports:
-      - 9001:9001
 
   requestgenerator:
     image: requestgenerator:latest
