@@ -39,10 +39,6 @@ services:
     container_name: configui
     ports:
       - 3002:80
-    environment:
-      - REACT_APP_MQTT_HOST=users
-      - REACT_APP_PDS_HOST=users:6080
-      - REACT_APP_REQGEN_HOST=users:8080
 
 volumes:
   pg_data: {}
