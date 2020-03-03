@@ -20,10 +20,6 @@ Acquire PDGF and a valid license. Place it one directory up in the hierarchy in 
 ├── logs
 ├── output
 ├── pdgf.jar
-├── run1.sh
-├── run2.sh
-├── run3.sh
-├── Speedtest.xlsx
 └── THIRD-PARTY-LICENSE.txt
 ```
 With the following being the content of config/customer-output.xml:
