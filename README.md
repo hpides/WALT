@@ -75,5 +75,5 @@ The frontend should be accessible at http://localhost:3000 and http://[*YOUR IP*
 Run
 ```bash
 docker-compose down
-```.
+```
 Use the -v flag to destroy all persistant data.
