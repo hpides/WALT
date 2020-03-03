@@ -3,6 +3,7 @@ version: '3.3'
 services:
   db:
     image: postgres
+    container_name: postgres 
     volumes:
       - pg_data:/var/lib/postgresql/data
     environment:
@@ -13,6 +14,7 @@ services:
       - 5432:5432
   performancedatastorage:
     image: performancedatastorage:latest
+    container_name: performancedatastorage
     restart: always
     ports:
       - 6080:6080
@@ -20,6 +22,7 @@ services:
       MYSQL_HOST: db
   mosquitto:
     image: eclipse-mosquitto:1.5
+    container_name: mosquitto
     volumes:
       - ./:/mosquitto/config/
       - mosquitto_data:/mosquitto/data
@@ -29,15 +32,17 @@ services:
 
   requestgenerator:
     image: requestgenerator:latest
+    container_name: requestgenerator
     restart: always
     volumes:
       - ../pdgf:/pdgf
     links:
       - mosquitto:users
 
-  conigui:
+  configui:
     image: configui:latest
     restart: always
+    container_name: configui
     ports:
       - 3002:80
     environment:
