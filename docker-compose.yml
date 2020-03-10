@@ -35,8 +35,12 @@ services:
     restart: always
     volumes:
       - ../pdgf:/pdgf
-    links:
-      - mosquitto:users
+    ports:
+      - 8080:8080
+    extra_hosts:
+      - "users:172.22.17.255"
+      - "posts:172.22.17.255"
+      - "search:172.22.17.255"
 
   configui:
     image: configui:latest
