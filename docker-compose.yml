@@ -1,5 +1,4 @@
 version: '3.3'
-
 services:
   db:
     image: postgres
@@ -10,15 +9,21 @@ services:
       - POSTGRES_USER=wordpress
       - POSTGRES_PASSWORD=wordpress
       - POSTGRES_DB=perfdata
+    ports:
+      - 5432:5432
   performancedatastorage:
     image: performancedatastorage:latest
     container_name: performancedatastorage
     restart: always
     environment:
       MYSQL_HOST: db
+    ports:
+      - 6080:6080
   mosquitto:
     image: eclipse-mosquitto:1.5
     container_name: mosquitto
+    ports:
+      - 9001:9001
     volumes:
       - ./:/mosquitto/config/
       - mosquitto_data:/mosquitto/data
