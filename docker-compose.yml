@@ -37,6 +37,8 @@ services:
       - ../pdgf:/pdgf
     ports:
       - 8080:8080
+    environment:
+            - EXTRA_ARGUMENTS=--location http://localhost:8080 --bufferSize 1
     extra_hosts:
       - "users:172.22.17.255"
       - "posts:172.22.17.255"
