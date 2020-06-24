@@ -11,7 +11,7 @@ verbose=0
 while getopts "h?:n:" opt; do
     case "$opt" in
     h|\?)
-        printf "NOPE!"
+        printf "Deploy all components of WALT to a Kubernetes cluster. Use the -n option of this script to set the namespace to be used. Default namespace is \"walt\".\n"
         exit 0
         ;;
     n)  namespace=$OPTARG
@@ -28,7 +28,7 @@ echo Deploying Request Generator
 cd ../../performance-data-storage/K8s
 echo Deploying Performance Data Storage
 ./deploy.sh
-cd ../../configui/K8s
+cd ../../configuration-ui/K8s
 echo Deploying Configuration UI
 ./deploy.sh
 cd ../..
