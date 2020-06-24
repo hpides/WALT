@@ -24,11 +24,11 @@ export NAMESPACE=$namespace
 kubectl get ns | grep $NAMESPACE || kubectl create ns $NAMESPACE
 cd request-generator/K8s
 echo Deploying Request Generator
-./deploy.sh
+./deploy.sh || exit $?
 cd ../../performance-data-storage/K8s
 echo Deploying Performance Data Storage
-./deploy.sh
+./deploy.sh || exit $?
 cd ../../configuration-ui/K8s
 echo Deploying Configuration UI
-./deploy.sh
+./deploy.sh || exit $?
 cd ../..
