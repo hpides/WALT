@@ -9,7 +9,7 @@ Second, after cloning this project, you need to initialise the contained submodu
 git submodule init  
 git submodule update  
 ```  
-See the (GIT configuration)[https://git-scm.com/book/en/v2/Git-Tools-Submodules] for reference.
+See the [Git documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for reference.
 
 
 ## PDGF preparation (do this once)
@@ -95,5 +95,5 @@ Use the -v flag to destroy all persistent data.
 Please replace *path: /home/worldofjarcraft/pdgf* in *request-generator/K8s/manifests/persistentVolume.yaml* by the installation directory of your PDGF instance if you would like to mount PDGF into the cluster from the local file system. If you use a multi-node cluster and only one node has a PDGF installation, execute the Kubernetes setup on this node.  
 Alternatives to this PDGF mounting might be using a different kind of PV (e.g. a Gluster volume) which requires adapting Request Generator's Kubernetes configurations accordingly. Also, one could add copying PDGF into Request Generator's container to the Dockerfile of Request Generator.  
 Note that Performance Data Storage currently is shipped with a PostgreSQL database that also needs persistent storage. Performance Data Storage is optional however, WALT can work without it.  
-Run the deploy-kubernetes.sh script to deploy all components of WALT into a Kubernetes cluster. It assumes a working docker and kubectl command to be present and a docker registry running at *localhost:5000.* Again, you will need to adapt the configuration scripts if your configuration differs.
+Run the deploy-kubernetes.sh script to deploy all components of WALT into a Kubernetes cluster. It assumes a working docker and kubectl command to be present and a docker registry running at *localhost:5000.* Again, you will need to adapt the configuration scripts if your configuration differs.  
 Finally, you might want to replace the used address for Configuration UI (configui) with an actual domain. Change the line *host: configui* in configuration-ui/K8s/manifests/configui.yaml accordingly.
