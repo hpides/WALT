@@ -1,0 +1,9 @@
+[submodule "configuration-ui"]
+	path = configuration-ui
+	url = git@gitlab.hpi.de:bp-tdgt/configuration-ui.git
+[submodule "request-generator"]
+	path = request-generator
+	url = git@gitlab.hpi.de:bp-tdgt/request-generator.git
+[submodule "performance-data-storage"]
+	path = performance-data-storage
+	url = git@gitlab.hpi.de:bp-tdgt/performance-data-storage.git
