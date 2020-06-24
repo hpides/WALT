@@ -73,6 +73,8 @@ With the following being the content of config/customer-output.xml:
 - cd into the Docker subdirectory
 - run build.sh
 
+Alternatively, use the provided script deploy-docker-compose.sh. It builds all components and starts them in detached state in docker-compose.
+
 ### Running the services
 Run
 ```bash
@@ -95,5 +97,3 @@ Alternatives to this PDGF mounting might be using a different kind of PV (e.g. a
 Note that Performance Data Storage currently is shipped with a PostgreSQL database that also needs persistent storage. Performance Data Storage is optional however, WALT can work without it.  
 Run the deploy-kubernetes.sh script to deploy all components of WALT into a Kubernetes cluster. It assumes a working docker and kubectl command to be present and a docker registry running at *localhost:5000.* Again, you will need to adapt the configuration scripts if your configuration differs.
 Finally, you might want to replace the used address for Configuration UI (configui) with an actual domain. Change the line *host: configui* in configuration-ui/K8s/manifests/configui.yaml accordingly.
-
-
