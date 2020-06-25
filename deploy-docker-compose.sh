@@ -1,4 +1,8 @@
 #!/bin/sh
+# no pushing to the docker registry
+unset deploy
+# make sure the output dir exists 
+mkdir pdgf-output 2>/dev/null
 cd request-generator/Docker
 echo Building request generator
 ./build.sh || exit $?

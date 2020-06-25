@@ -50,7 +50,7 @@ With the following being the content of config/customer-output.xml:
 	<!-- DEFAULT output for all Tables, if no table specific output is specified-->
 	<output name="CSVRowOutput">
 		<fileTemplate>outputDir + table.getName() + fileEnding</fileTemplate>
-		<outputDir>/pdgf/output/</outputDir>
+		<outputDir>/output/</outputDir>
 		<fileEnding>.csv</fileEnding>
 		<charset>UTF-8</charset>
 		<sortByRowID>true</sortByRowID>

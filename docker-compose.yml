@@ -35,10 +35,11 @@ services:
     restart: always
     volumes:
       - ../pdgf:/pdgf
+      - ./pdgf-output:/output
     ports:
       - 8080:8080
     environment:
-            - EXTRA_ARGUMENTS=--location http://localhost:8080 --bufferSize 1
+            - EXTRA_ARGUMENTS=--location http://localhost:8080 --bufferSize 1 --alternative-output-dir /output
     extra_hosts:
       - "users:172.22.17.255"
       - "posts:172.22.17.255"
