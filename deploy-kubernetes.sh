@@ -31,4 +31,7 @@ echo Deploying Performance Data Storage
 cd ../../configuration-ui/K8s
 echo Deploying Configuration UI
 ./deploy.sh || exit $?
+cd ../../material-pdgf/K8s
+echo Deploying Material PDGF UI
+./deploy.sh || exit $?
 cd ../..
