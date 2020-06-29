@@ -51,6 +51,12 @@ services:
     container_name: configui
     ports:
       - 3000:80
+  pdgfui:
+    image: pdgfui:latest
+    restart: always
+    container_name: pdgfui
+    ports:
+      - 3001:80
 
 volumes:
   pg_data: {}
