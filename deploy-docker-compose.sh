@@ -15,4 +15,8 @@ cd configuration-ui/Docker
 echo Building configuration ui
 ./build.sh || exit $?
 cd ../..
+cd material-pdgf/Docker
+echo Building material pdgf ui
+./build.sh || exit $?
+cd ../.
 docker-compose up -d || exit $?

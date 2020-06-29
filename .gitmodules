@@ -7,3 +7,6 @@
 [submodule "performance-data-storage"]
 	path = performance-data-storage
 	url = git@gitlab.hpi.de:bp-tdgt/performance-data-storage.git
+[submodule "material-pdgf"]
+	path = material-pdgf
+	url = git@gitlab.hpi.de:juergen.schlossbaue/material-pdgf.git
