@@ -1,5 +1,6 @@
-# Whole system config
-This scripts make starting all services for development or productive usage easier. The docker-compose.yml contains a configuration that can bring up performance data storage and its required database with persistent storage, request generator, an apache serving the frontend and a correctly configured mqtt broker with a single command.  
+# WALT
+WALT (Web API Load Tester) is a realistic load generator for web applications. It consists of 6 microservices that deal with different tasks in the system. Their code is spread out to different subprojects.  
+The scripts in this project make starting all services for development or productive usage easier. The docker-compose.yml contains a configuration that can bring up performance data storage and its required database with persistent storage, request generator, an apache serving the frontend and a correctly configured mqtt broker with a single command.  
 Also, there is a script that automatically deploys all components into a Kubernetes cluster.
 
 ## Preparations
@@ -13,7 +14,7 @@ See the [Git documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 
 ## PDGF preparation (do this once)
-Acquire PDGF and a valid license. Place it one directory up in the hierarchy in a pdgf directory (../pdgf). The structure of the directory should look something like this:
+Acquire PDGF and a valid license from [bankmark](https://www.bankmark.de/). Place it one directory up in the hierarchy in a pdgf directory (../pdgf). The structure of the directory should look something like this:
 ```
 ├── config
 │   ├── customer-output.xml
@@ -81,7 +82,7 @@ Run
 docker-compose up
 ```
 Hint: Refer to the docker-compose documentation for additional flags supported by docker-compose up.  
-The frontend should be accessible at http://localhost:3000 and http://[*YOUR IP*]:3000.
+The frontend should be accessible at http://localhost:3000 and http://[*YOUR PUBLIC IP*]:3000.
 
 ### Stopping the services
 Run
