@@ -1,12 +1,12 @@
 [submodule "configuration-ui"]
 	path = configuration-ui
-	url = git@gitlab.hpi.de:bp-tdgt/configuration-ui.git
+	url = git@github.com:hpides/Configuration-UI.git
 [submodule "request-generator"]
 	path = request-generator
-	url = git@gitlab.hpi.de:bp-tdgt/request-generator.git
+	url = git@github.com:hpides/Request-Generator.git 
 [submodule "performance-data-storage"]
 	path = performance-data-storage
-	url = git@gitlab.hpi.de:bp-tdgt/performance-data-storage.git
+	url = git@github.com:hpides/Performance-Data-Storage.git
 [submodule "material-pdgf"]
 	path = material-pdgf
-	url = git@gitlab.hpi.de:juergen.schlossbaue/material-pdgf.git
+	url = git@github.com:hpides/PDGF-UI.git
