@@ -32,7 +32,7 @@ services:
     ports:
       - 5432:5432
   performancedatastorage:
-    image: performancedatastorage:latest
+    image: worldofjarcraft/performancedatastorage:latest
     container_name: performancedatastorage
     restart: always
     environment:
@@ -40,17 +40,16 @@ services:
     ports:
       - 6080:6080
   mosquitto:
-    image: eclipse-mosquitto:1.5
+    image:  worldofjarcraft/mosquitto:latest
     container_name: mosquitto
     ports:
       - 9001:9001
     volumes:
-      - ./:/mosquitto/config/
       - mosquitto_data:/mosquitto/data
       - mosquitto_log:/mosquitto/log
 
   requestgenerator:
-    image: requestgenerator:latest
+    image:  worldofjarcraft/requestgenerator:latest
     container_name: requestgenerator
     restart: always
     volumes:
@@ -66,13 +65,13 @@ services:
       - "search:172.22.17.255"
 
   configui:
-    image: configui:latest
+    image:  worldofjarcraft/configui:latest
     restart: always
     container_name: configui
     ports:
       - 3000:80
   pdgfui:
-    image: pdgfui:latest
+    image:  worldofjarcraft/pdgfui:latest
     restart: always
     container_name: pdgfui
     ports:

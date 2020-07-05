@@ -27,15 +27,24 @@ OPTIND=1         # Reset in case getopts has been used previously in the shell.
 # Initialize our own variables:
 namespace="walt"
 verbose=0
-
-while getopts "h?:n:" opt; do
+#might be set by last script run
+unset DEV
+unset REGISTRY
+while getopts "h?:n:r:d?" opt; do
     case "$opt" in
     h|\?)
         printf "Deploy all components of WALT to a Kubernetes cluster. Use the -n option of this script to set the namespace to be used. Default namespace is \"walt\".\n"
+	printf "Use -r to set a different registry to push the image to. This defaults to \"localhost:5000\".\n"
+        printf "Finally, use -d to build images from source; omit -d to use images from Docker Hub.\n"
         exit 0
         ;;
     n)  namespace=$OPTARG
         ;;
+    r)  registry=$OPTARG
+	export REGISTRY=$registry
+	;;
+    d)  export DEV=true
+	;;
     esac
 done
 
